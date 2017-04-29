@@ -1,0 +1,12 @@
+style.css,
+
+.done {
+    text-decoration: line-through !important;
+    color: green !important;
+}
+
+.not-done {
+    text-decoration: underline;
+    color: black;
+}
+
