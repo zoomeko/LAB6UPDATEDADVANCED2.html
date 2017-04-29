@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+            <link rel="stylesheet"type="text/css" href="advanced6.css">
+
+    <script>
+        $(document).ready(function () {
+            $("#add").click(function () {
+
+               var new_task = $('#item').val();
+               if (new_task!='' && new_task!=null) {
+                   $("#list1").append('<li class="not-done">' + new_task + '</li>');
+               }
+
+            });
+            $("#remove").click(function () {
+                $("#list1").empty();
+
+            });
+            $("body").on("click","li",function () {
+                $(this).toggleClass("done");
+
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+<div>
+    <ul id="list1">
+
+    </ul>
+    <input id="item" type="text"/>
+    <button id="add">Add Item</button>
+    <button id="remove">Remove</button>
+</div>
+
+</body>
+</html>
